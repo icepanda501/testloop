@@ -32,6 +32,7 @@ scrap_linked = function(url){
       var position = name.next();
       var location = $(position.next()).find("dd")
       var education = $(position.next().next().children().children()[2]);
+
       console.log(name.text());
       console.log(position.text())
       location.each(function(i,e){
@@ -45,7 +46,7 @@ scrap_linked = function(url){
 
       people.each(function(i,e){
         console.log($(this).find('a')[0].attribs.href);
-        scrap_linked($(this).find('a')[0].attribs.href)
+        // scrap_linked($(this).find('a')[0].attribs.href)
       });
 
 
